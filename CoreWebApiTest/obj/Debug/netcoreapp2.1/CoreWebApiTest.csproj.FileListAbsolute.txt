@@ -1,0 +1,14 @@
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\CoreWebApiTest.deps.json
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\CoreWebApiTest.runtimeconfig.json
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\CoreWebApiTest.runtimeconfig.dev.json
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\CoreWebApiTest.dll
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.csprojAssemblyReference.cache
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.csproj.CoreCompileInputs.cache
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.RazorAssemblyInfo.cache
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.RazorAssemblyInfo.cs
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.AssemblyInfoInputs.cache
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.AssemblyInfo.cs
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.RazorTargetAssemblyInfo.cache
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\CoreWebApiTest.pdb
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.dll
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.pdb
