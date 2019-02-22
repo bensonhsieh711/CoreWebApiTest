@@ -11,7 +11,15 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="NLog" Version="4.5.11" />
+    <PackageReference Include="NLog.Config" Version="4.5.11" />
     <PackageReference Include="StackExchange.Redis" Version="2.0.519" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SybaseFramework">
+      <HintPath>..\..\..\..\Documents\SAM_WebApi\NPA_SAM_WebApi\MyLib\SybaseFramework.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

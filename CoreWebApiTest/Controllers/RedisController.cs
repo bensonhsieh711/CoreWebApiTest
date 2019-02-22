@@ -1,6 +1,10 @@
 ﻿using CoreWebApiTest.Model;
 using Microsoft.AspNetCore.Mvc;
 using StackExchange.Redis;
+using System;
+using SybaseFramework;
+using NLog;
+using Microsoft.Extensions.Options;
 
 namespace CoreWebApiTest.Controllers
 {
@@ -8,20 +12,39 @@ namespace CoreWebApiTest.Controllers
     [ApiController]
     public class RedisController : ControllerBase
     {
-        public RedisConfig _RedisConfig { get; }
-        public RedisController(Microsoft.Extensions.Options.IOptions<RedisConfig> redisConfig)
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+        private RedisConfig _RedisConfig { get; }
+
+        public RedisController(IOptions<RedisConfig> redisConfig)
         {
             _RedisConfig = redisConfig.Value;
-        } //Action Controller
+        }
+
         [HttpGet("{val}")]
         public string Get(string val)
         {
-            ConnectionMultiplexer redisConn = ConnectionMultiplexer.Connect($"{_RedisConfig.IP},password={_RedisConfig.Pass}");
-            //ConnectionMultiplexer redisConn = ConnectionMultiplexer.Connect("127.0.0.1:6379,password=syscom#1@2");
-            IDatabase resDb = redisConn.GetDatabase();
-            resDb.StringSet("testKey", val);
-            var result = resDb.StringGet("testKey");
-            return result.ToString();
-        }
+            try
+            {
+                using (var redisConn = ConnectionMultiplexer.Connect($"{_RedisConfig.IP},password={_RedisConfig.Pass}"))
+                {
+                    IDatabase resDb = redisConn.GetDatabase();
+
+                    var result = resDb.StringGet("testKey");
+
+                    while (result.IsNull)
+                    {
+                        resDb.StringSet("testKey", val, new TimeSpan(0, 0, 30));
+                        result = resDb.StringGet("testKey");
+                    }
+                    var ttl = resDb.KeyTimeToLive("testKey");
+                    return $"Key:{result.ToString()}, TimeToLive:{ttl.Value.ToString()}";
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Warn(ex.ToString());
+                throw ex;
+            }
+        }        
     }
 }

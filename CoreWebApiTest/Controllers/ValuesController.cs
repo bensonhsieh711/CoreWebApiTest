@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CoreWebApiTest.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace CoreWebApiTest.Controllers
 {
@@ -10,11 +12,19 @@ namespace CoreWebApiTest.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private DBConfig _DBConfig { get; }
+
+        public ValuesController(IOptions<DBConfig> dbConfig)
+        {
+            _DBConfig = dbConfig.Value;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            //return new string[] { "value1", "value2" };
+            return new string[] { _DBConfig.IP, _DBConfig.UID, _DBConfig.Pass, _DBConfig.DB };
         }
 
         // GET api/values/5

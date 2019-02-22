@@ -28,8 +28,9 @@ namespace CoreWebApiTest
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             OptionsConfigurationServiceCollectionExtensions.Configure<RedisConfig>(services, Configuration.GetSection("ConnectionStrings:Redis"));
+            OptionsConfigurationServiceCollectionExtensions.Configure<DBConfig>(services, Configuration.GetSection("ConnectionStrings:JCDB"));
         }
-
+        
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {

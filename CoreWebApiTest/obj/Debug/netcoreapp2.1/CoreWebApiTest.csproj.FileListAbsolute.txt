@@ -2,7 +2,6 @@ C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\CoreWebApiTest.runtimeconfig.json
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\CoreWebApiTest.runtimeconfig.dev.json
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\CoreWebApiTest.dll
-C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.csprojAssemblyReference.cache
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.csproj.CoreCompileInputs.cache
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.RazorAssemblyInfo.cache
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.RazorAssemblyInfo.cs
@@ -12,3 +11,7 @@ C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\CoreWebApiTest.pdb
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.dll
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.pdb
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\SybaseFramework.dll
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\Sybase.AdoNet4.AseClient.dll
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.csproj.CopyComplete
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\NLog.config
