@@ -5,6 +5,7 @@ using System;
 using SybaseFramework;
 using NLog;
 using Microsoft.Extensions.Options;
+using System.Threading.Tasks;
 
 namespace CoreWebApiTest.Controllers
 {
@@ -36,8 +37,8 @@ namespace CoreWebApiTest.Controllers
                         resDb.StringSet("testKey", val, new TimeSpan(0, 0, 30));
                         result = resDb.StringGet("testKey");
                     }
-                    var ttl = resDb.KeyTimeToLive("testKey");
-                    return $"Key:{result.ToString()}, TimeToLive:{ttl.Value.ToString()}";
+                    var ttl = resDb.KeyTimeToLive("testKey");                    
+                    return $"Key:testKey, Value:{result.ToString()}, TimeToLive:{ttl.Value.ToString()}";
                 }
             }
             catch (Exception ex)
@@ -45,6 +46,29 @@ namespace CoreWebApiTest.Controllers
                 logger.Warn(ex.ToString());
                 throw ex;
             }
-        }        
+        } 
+        
+        public async Task<int> Set(string key, string value, int expireSeconds = 0)
+        {
+            int result = 0;
+
+            try
+            {
+                using (var redisConn = ConnectionMultiplexer.Connect($"{_RedisConfig.IP},password={_RedisConfig.Pass}"))
+                {
+                    IDatabase resDb = redisConn.GetDatabase();
+                    var b = await resDb.StringSetAsync(key, value, new TimeSpan(0, 0, expireSeconds));
+                    result = 1;
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Warn(ex.ToString());
+                throw ex;
+            }
+
+            return result;
+        }
     }
 }

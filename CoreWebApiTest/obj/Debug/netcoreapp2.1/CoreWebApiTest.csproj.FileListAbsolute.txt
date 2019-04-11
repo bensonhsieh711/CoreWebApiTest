@@ -15,3 +15,4 @@ C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\Sybase.AdoNet4.AseClient.dll
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.csproj.CopyComplete
 C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\bin\Debug\netcoreapp2.1\NLog.config
+C:\Users\lukeh\Source\repos\CoreWebApiTest\CoreWebApiTest\obj\Debug\netcoreapp2.1\CoreWebApiTest.csprojAssemblyReference.cache
